@@ -12,18 +12,18 @@ This unit, be sure to complete all tasks listed below. To complete a task, place
   - [X] Your entity relationship diagram should include the tables in your database.
 - [ ] Prepare your three-minute pitch presentation, to be presented during Unit 7 (the next unit).
   - [X] You do **not** need to submit any materials in advance of your pitch.
-- [ ] In this document, complete all three questions in the **Reflection** section below
+- [X] In this document, complete all three questions in the **Reflection** section below
 
 ## Reflection
 
 ### 1. What went well during this unit?
 
-[👉🏾👉🏾👉🏾 your answer here]
+Figuring out the database was easier than we initally thought. 
 
 ### 2. What were some challenges your group faced in this unit?
 
-[👉🏾👉🏾👉🏾 your answer here]
+Designing in Figma is challenging and confusing. 
 
 ### 3. What additional support will you need in upcoming units as you continue to work on your final project?
 
-[👉🏾👉🏾👉🏾 your answer here]
+Nothing currently.
