@@ -8,6 +8,12 @@ Reference the Creating an Entity Relationship Diagram final project guide in the
 
 ## Add the Entity Relationship Diagram
 
+- User: Stores user account information (email, password, display name, etc.).
+- Category: Stores the predefined categories for filtering (e.g., "Furniture," "Tools").
+- Listing: Stores all the details for each item posted for sale (title, price, seller, etc.).
+- Photo: Stores the images associated with each listing.
+- Favorite: A junction table that links Users to the Listings they have saved.
+- Message: Stores the in-app messages sent between users about a specific listing.
 
 
 [👉🏾👉🏾👉🏾 Include an image or images of the diagram below. You may also wish to use the following markdown syntax to outline each table, as per your preference.]
