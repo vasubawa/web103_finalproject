@@ -4,9 +4,6 @@ Reference the Creating an Entity Relationship Diagram final project guide in the
 
 ## Create the List of Tables
 
-[👉🏾👉🏾👉🏾 List each table in your diagram]
-
-## Add the Entity Relationship Diagram
 
 - User: Stores user account information (email, password, display name, etc.).
 - Category: Stores the predefined categories for filtering (e.g., "Furniture," "Tools").
@@ -15,6 +12,10 @@ Reference the Creating an Entity Relationship Diagram final project guide in the
 - Favorite: A junction table that links Users to the Listings they have saved.
 - Message: Stores the in-app messages sent between users about a specific listing.
 
+
+[👉🏾👉🏾👉🏾 List each table in your diagram]
+
+## Add the Entity Relationship Diagram
 
 [👉🏾👉🏾👉🏾 Include an image or images of the diagram below. You may also wish to use the following markdown syntax to outline each table, as per your preference.]
 
