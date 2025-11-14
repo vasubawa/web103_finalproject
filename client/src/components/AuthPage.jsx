@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { MapPin, ArrowLeft, Github } from "lucide-react";
+import { MapPin, ArrowLeft, GitHub } from "lucide-react";
 import { Button } from "./Button";
 
 const API_URL = import.meta?.env?.VITE_API_URL || "http://localhost:3001";
@@ -45,7 +45,7 @@ export function AuthPage() {
             variant="primary"
             className="w-full flex items-center justify-center gap-3 bg-gray-900 hover:bg-gray-800 border-0"
           >
-            <Github className="size-5" />
+            <GitHub className="size-5" />
             Continue with GitHub
           </Button>
 
