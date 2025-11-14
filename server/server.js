@@ -1,0 +1,66 @@
+require('dotenv').config()
+
+const express = require('express')
+const cors = require('cors')
+const session = require('express-session')
+const passport = require('passport')
+
+// Ensure strategy is registered
+require('./config/auth')
+
+const authRoutes = require('./routes/auth')
+const listingsRoutes = require('./routes/listings')
+const categoriesRoutes = require('./routes/categories')
+const favoritesRoutes = require('./routes/favorites')
+
+const app = express()
+
+const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:5173'
+const PORT = process.env.PORT ? Number(process.env.PORT) : 3001
+const SESSION_SECRET = process.env.SESSION_SECRET || 'codepath'
+
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
+app.use(cors({
+	origin: CLIENT_URL,
+	methods: 'GET,POST,PUT,DELETE,PATCH',
+	credentials: true,
+}))
+
+app.use(session({
+	secret: SESSION_SECRET,
+	resave: false,
+	saveUninitialized: true,
+	cookie: {
+		httpOnly: true,
+		sameSite: 'lax',
+		secure: false,
+	},
+}))
+
+app.use(passport.initialize())
+app.use(passport.session())
+
+app.get('/health', (req, res) => {
+	res.json({ ok: true })
+})
+
+app.use('/auth', authRoutes)
+app.use('/api/listings', listingsRoutes)
+app.use('/api/categories', categoriesRoutes)
+app.use('/api/favorites', favoritesRoutes)
+
+app.get('/', (req, res) => {
+  res.json({ message: 'YardShare API running', user: req.user || null })
+})
+
+app.use((err, req, res, next) => {
+	console.error('Server error:', err)
+	res.status(500).json({ error: 'Internal Server Error' })
+})
+
+app.listen(PORT, () => {
+	console.log(`Server listening on http://localhost:${PORT}`)
+})
+
