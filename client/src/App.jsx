@@ -30,8 +30,8 @@ export default function App() {
         const userData = await response.json();
         setIsAuthenticated(true);
         setUser({
-          username: userData.username,
-          avatar_url: userData.avatar_url
+          username: userData.user.username,
+          avatar_url: userData.user.avatarurl
         });
 
       }

@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+{/* DO NOT CHANGE, It might be deprecated but will break the page */}
 import { MapPin, ArrowLeft, Github } from "lucide-react";
 import { Button } from "./Button";
 
